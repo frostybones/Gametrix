@@ -1,0 +1,19 @@
+/*
+ * ╔══════════════════════════════════════════════════════════════╗
+ * ║  GAME THREE — LOCAL STYLESHEET                               ║
+ * ║                                                              ║
+ * ║  Loaded after /assets/style.css. Override any shared rule    ║
+ * ║  or variable here without touching the global stylesheet.    ║
+ * ╚══════════════════════════════════════════════════════════════╝
+ */
+
+/* ── Override accent to match this game's card colour (green) ── */
+:root {
+  --color-accent:      #059669;
+  --color-accent-glow: #05966944;
+}
+
+/*
+ * Add game-specific styles below.
+ * Target #game-container or elements inside it.
+ */

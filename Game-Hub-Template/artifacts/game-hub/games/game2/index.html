@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Two — Game Hub</title>
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="../../assets/style.css" />
+    <!-- Game-specific styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <header class="game-page-header">
+      <a href="../../" class="btn btn-ghost">← Back to Home</a>
+      <span class="game-page-title">Hang-Man</span>
+      <span></span>
+    </header>
+
+    <div class="game-wrapper">
+      <div class="game-container" id="game-container">
+        <div class="game-placeholder">
+          <div class="hangman-container">
+            <img src="Hangman-Assets/HangPole.png" alt="HangPole" class="hangpole" />
+            <div>
+              <div class="word">
+                <hr class="hangline" width="30" /> 
+                <hr class="hangline" width="30" />
+                <hr class="hangline" width="30" />
+                <hr class="hangline" width="30" />
+                <hr class="hangline" width="30" />
+              </div>
+              <img src="Hangman-Assets/FullBody.png" alt="Man" class="man" />
+            </div>
+          </div>
+          <div class="controls">
+            <button id="startBtn" onclick="startGame()" class="btn btn-ghost">Start Game</button>
+            <button id="pauseBtn" onclick="pauseGame()" class="btn btn-ghost">Pause Game</button>
+            <button id="resetBtn" onclick="resetGame()" class="btn btn-ghost">Reset Game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page transition (progress bar + fade) -->
+    <script src="/assets/transitions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

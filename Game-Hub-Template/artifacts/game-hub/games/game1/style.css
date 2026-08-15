@@ -1,0 +1,27 @@
+
+:root {
+  --color-accent:      #7c3aed;
+  --color-accent-glow: #7c3aed44;
+}
+.SnakeCanvas{
+  background-color: rgb(5, 3, 3);
+  width: 70vh;
+  height: 60vh;
+  margin: 10px;
+}
+.game-container {
+  width: 90%;
+  height: 550px;
+  max-width: 900px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}

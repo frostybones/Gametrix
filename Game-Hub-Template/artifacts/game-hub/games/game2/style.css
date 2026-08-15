@@ -1,0 +1,25 @@
+
+:root {
+  --color-accent:      #0891b2;
+  --color-accent-glow: #0891b244;
+}
+
+.hangman-container {
+  display: flex;
+  flex-direction: row;
+}
+img {
+  align-self: center; /* Options: center, flex-start, flex-end */
+}
+.man {
+  margin-top: 70px;
+}
+.word{
+  display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+}
+hr{
+  margin: 10px;
+
+}

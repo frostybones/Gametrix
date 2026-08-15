@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Hub — My Collection</title>
+    <meta name="description" content="A personal game collection hub." />
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+
+    <!-- ╔══════════════════════════════════════════════╗
+         ║  HEADER / NAV                                ║
+         ╚══════════════════════════════════════════════╝ -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- ── Logo / site title ── -->
+        <a href="./" class="logo" aria-label="Game Hub home">
+          <span class="logo-icon" aria-hidden="true">🎮</span>
+          <span class="logo-text">GameHub</span>
+        </a>
+
+        <!-- ── Navigation links ── -->
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#games" class="nav-link">Games</a>
+          <!-- Add more nav links here as needed -->
+          <!-- <a href="#about" class="nav-link">About</a> -->
+        </nav>
+      </div>
+    </header>
+
+    <!-- ╔══════════════════════════════════════════════╗
+         ║  HERO SECTION                                ║
+         ╚══════════════════════════════════════════════╝ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-badge">My Personal Collection</p>
+        <h1 class="hero-title">Welcome to the <span class="highlight">Hub</span></h1>
+        <p class="hero-subtitle">
+          Pick a game and start playing. New games added regularly.
+        </p>
+        <a href="#games" class="btn btn-primary">Browse Games</a>
+      </div>
+      <!-- Decorative background blobs -->
+      <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════════╗
+         ║  GAMES GRID                                  ║
+         ╚══════════════════════════════════════════════╝ -->
+    <main id="games" class="games-section">
+      <div class="container">
+        <h2 class="section-title">Available Games</h2>
+        <p class="section-subtitle">Click any card to launch the game.</p>
+
+        <!--
+        ┌─────────────────────────────────────────────────────────┐
+        │  HOW TO ADD A NEW GAME                                   │
+        │                                                          │
+        │  1. Duplicate the /games/game1/ folder and rename it     │
+        │     (e.g. /games/mygame/).                               │
+        │                                                          │
+        │  2. Copy one of the <article> blocks below, update:      │
+        │       – href="..."  → relative path to your game folder  │
+        │       – data-color  → any CSS color for the thumbnail    │
+        │       – The emoji inside .card-thumb-icon                │
+        │       – .card-title and .card-desc text                  │
+        │       – (optional) .card-badge text                      │
+        │                                                          │
+        │  3. Build your game inside your new folder's index.html  │
+        │     using the canvas/script.js template provided.        │
+        └─────────────────────────────────────────────────────────┘
+        -->
+
+        <div class="games-grid">
+
+          <!-- ── Game Card 1 ── -->
+          <article class="game-card" data-color="#7c3aed">
+            <a href="games/game1/" class="card-link" aria-label="Play Game One">
+              <!-- Thumbnail placeholder — swap with <img> once you have art -->
+              <div class="card-thumb">
+                <div class="card-thumb-icon"><img src="../../Logos/snakeLogo.png" alt="Game One Thumbnail" class="Snakelogo" /></div>
+              </div>
+              <div class="card-body">
+                <span class="card-badge">Action</span>
+                <h3 class="card-title">Snake Game</h3>
+                <p class="card-desc">
+                  Classic arcade game: guide a growing snake, eat, avoid collisions.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="play-btn">Play Now →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ── Game Card 2 ── -->
+          <article class="game-card" data-color="#0891b2">
+            <a href="games/game2/" class="card-link" aria-label="Play Hang-Man">
+              <div class="card-thumb">
+                <div class="card-thumb-icon"><img src="../../Logos/hangmanLogo.png" alt="Hang-Man Thumbnail" class="Hangmanlogo" /></div>
+              </div>
+              <div class="card-body">
+                <span class="card-badge">Puzzle</span>
+                <h3 class="card-title">Hang-Man</h3>
+                <p class="card-desc">
+                  Short description of your second game goes here. Give
+                  players a reason to click.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="play-btn">Play Now →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ── Game Card 3 ── -->
+          <article class="game-card" data-color="#059669">
+            <a href="games/game3/" class="card-link" aria-label="Play Game Three">
+              <div class="card-thumb">
+                <div class="card-thumb-icon">🏆</div>
+              </div>
+              <div class="card-body">
+                <span class="card-badge">Strategy</span>
+                <h3 class="card-title">Game Three</h3>
+                <p class="card-desc">
+                  Short description of your third game goes here. Hook them
+                  in one sentence.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span class="play-btn">Play Now →</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ── "Coming Soon" placeholder card — duplicate to add more slots ── -->
+          <article class="game-card game-card--empty">
+            <div class="card-link card-link--disabled" aria-hidden="true">
+              <div class="card-thumb card-thumb--empty">
+                <div class="card-thumb-icon">＋</div>
+              </div>
+              <div class="card-body">
+                <span class="card-badge card-badge--muted">Coming Soon</span>
+                <h3 class="card-title">Your Next Game</h3>
+                <p class="card-desc">
+                  Duplicate a game folder and drop your project in to add it
+                  here.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /games-grid -->
+      </div>
+    </main>
+
+    <!-- ╔══════════════════════════════════════════════╗
+         ║  FOOTER                                      ║
+         ╚══════════════════════════════════════════════╝ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="footer-logo">🎮 GameHub</span>
+        <p class="footer-copy">Personal game collection — built with vanilla HTML/CSS/JS.</p>
+      </div>
+    </footer>
+
+    <!-- Shared JS (animations, interactivity) -->
+    <script src="assets/main.js"></script>
+    <!-- Page transition (progress bar + fade) -->
+    <script src="assets/transitions.js"></script>
+  </body>
+</html>
