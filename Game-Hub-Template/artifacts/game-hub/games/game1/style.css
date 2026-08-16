@@ -25,3 +25,27 @@
   position: relative;
   flex-direction: column;
 }
+
+/* Mobile-only adjustments */
+@media (max-width: 640px) {
+  .SnakeCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .game-container {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .controls .btn {
+    width: 100%;
+  }
+}

@@ -557,9 +557,43 @@ ul { list-style: none; }
 
 /* ─── 11. RESPONSIVE ADJUSTMENTS ───────────────────────────── */
 @media (max-width: 640px) {
+  /* Touch-friendly button sizing for mobile */
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Header navigation */
   .main-nav { gap: 1rem; }
+  .nav-link { font-size: 0.8rem; }
+
+  /* Hero section */
   .hero { text-align: left; }
   .hero-inner { align-items: flex-start; }
+  .hero-title { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+  .hero-subtitle { font-size: 0.9rem; }
+
+  /* Games grid - single column */
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-thumb-icon {
+    font-size: 2.2rem;
+  }
+
+  .game-card:not(.game-card--empty):hover .card-thumb-icon {
+    transform: scale(1.08);
+  }
+
+  .card-title { font-size: 0.95rem; }
+  .card-desc { font-size: 0.75rem; }
+
+  /* Footer */
   .footer-inner { flex-direction: column; align-items: flex-start; }
+  
+  /* Game page */
   .game-container { aspect-ratio: 4 / 3; }
+  .game-wrapper { padding: 1rem 0.75rem; }
 }

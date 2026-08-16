@@ -23,3 +23,37 @@ hr{
   margin: 10px;
 
 }
+
+/* Mobile-only adjustments */
+@media (max-width: 640px) {
+  .hangman-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .man {
+    margin-top: 30px;
+  }
+
+  .word {
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .controls .btn {
+    width: 100%;
+  }
+}
