@@ -193,7 +193,7 @@ ul { list-style: none; }
   font-size: 0.85rem;
   padding: 0.45rem 1rem;
 }
-.btn-ghost:hover {
+.btn-ghost:hover:not(:disabled) {
   color: var(--color-text);
   border-color: var(--color-accent);
   background-color: var(--color-accent-glow);

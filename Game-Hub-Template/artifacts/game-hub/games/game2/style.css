@@ -23,7 +23,53 @@ hr{
   margin: 10px;
 
 }
-
+#WordInput {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  border: none;
+}
+.letters {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: rgb(219, 137, 29);
+  background: #52595D;
+  margin: 10px;
+  border: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  clip-path: polygon(
+    6px 0, calc(100% - 6px) 0, 100% 6px,
+    100% calc(100% - 6px), calc(100% - 6px) 100%,
+    6px 100%, 0 calc(100% - 6px), 0 6px
+  );
+  box-shadow: 4px 4px 0 #6e5e5e;
+  transform: translate(0, 0);
+  transition: transform 0.05s steps(1), box-shadow 0.05s steps(1), background 0.05s steps(1);
+}
+.letters:disabled {
+  background: #17132a;
+  box-shadow: 0 0 0 #6e5e5e;
+  transform: translate(4px, 4px);
+}
+.controls {
+   align-items: center;
+}
+.LettersContainer {
+  margin-left: 350px;
+  width: 50%;
+}
 /* Mobile-only adjustments */
 @media (max-width: 640px) {
   .hangman-container {

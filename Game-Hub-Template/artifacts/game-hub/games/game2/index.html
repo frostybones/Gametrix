@@ -12,7 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Shared site styles -->
     <link rel="stylesheet" href="../../assets/style.css" />
     <!-- Game-specific styles -->
@@ -30,22 +31,21 @@
       <div class="game-container" id="game-container">
         <div class="game-placeholder">
           <div class="hangman-container">
-            <img src="Hangman-Assets/HangPole.png" alt="HangPole" class="hangpole" />
+            <img src="Hangman-Assets/HangPole.png" alt="HangPole" class="hangpole" id="hangPole" />
             <div>
-              <div class="word">
-                <hr class="hangline" width="30" /> 
-                <hr class="hangline" width="30" />
-                <hr class="hangline" width="30" />
-                <hr class="hangline" width="30" />
-                <hr class="hangline" width="30" />
+              <div class="word" id="word">
               </div>
-              <img src="Hangman-Assets/FullBody.png" alt="Man" class="man" />
+              <img src="Hangman-Assets/FullBody.png" alt="Man" class="man" id="man" />
             </div>
           </div>
           <div class="controls">
+            <input type="text" id="WordInput" maxlength="10" placeholder="Enter a Word" />
             <button id="startBtn" onclick="startGame()" class="btn btn-ghost">Start Game</button>
-            <button id="pauseBtn" onclick="pauseGame()" class="btn btn-ghost">Pause Game</button>
+            <button id="randomBtn" onclick="generateRandomWord()" class="btn btn-ghost">Random Word</button>
             <button id="resetBtn" onclick="resetGame()" class="btn btn-ghost">Reset Game</button>
+            <div class="LettersContainer" id="LettersContainer">
+
+            </div>
           </div>
         </div>
       </div>

@@ -2,8 +2,8 @@ const canvas = document.getElementById('SnakeCanvas');
 const ctx = canvas.getContext('2d');
 
 const boardSize = 14; 
-const tileSizewidth = canvas.width / boardSize; 
-const tileSizeheight = canvas.height / boardSize; 
+const tileSizewidth = (canvas.width) / boardSize ; 
+const tileSizeheight = (canvas.height) / boardSize ; 
 
 const color1 = 'rgb(6, 134, 23)'; 
 const color2 = 'rgb(29, 199, 74)'; 
