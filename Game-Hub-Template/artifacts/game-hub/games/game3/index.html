@@ -20,37 +20,41 @@
   </head>
   <body>
 
+    
     <header class="game-page-header">
-      <a href="../../" class="btn btn-ghost">← Back to Home</a>
-      <span class="game-page-title">Game Three</span>
+      <a href="../../../../../index.html" class="btn btn-ghost">← Back to Home</a>
+      <span class="game-page-title">Hang-Man</span>
       <span></span>
     </header>
 
     <div class="game-wrapper">
-      <!--
-      ╔════════════════════════════════════════════════════════════╗
-      ║  GAME CONTAINER — add your canvas / UI here               ║
-      ║  Delete the .game-placeholder block when ready.           ║
-      ╚════════════════════════════════════════════════════════════╝
-      -->
       <div class="game-container" id="game-container">
         <div class="game-placeholder">
-          <div class="game-placeholder-icon">🏆</div>
-          <h2>Game Three</h2>
-          <p>
-            Your game goes here. Add a <code>&lt;canvas&gt;</code>,
-            an <code>&lt;iframe&gt;</code>, or any HTML you like
-            inside <code>#game-container</code>.
-          </p>
-          <p style="font-size:0.8rem;color:var(--color-text-dim);">
-            Edit <code>games/game3/index.html</code> to get started.
-          </p>
+          <div class="hangman-container">
+            <div id="win-screen" class="hidden">
+              <h1>You Win!</h1>
+              <h3 id="winWord"></h3>
+              <button onclick="resetGame()" class="btn btn-ghost" id="resetBtn">Play Again</button>
+            </div>
+            <div id="lose-screen" class="hidden">
+              <h1>Game Over!</h1>
+              <h3 id="loseWord"></h3>
+              <button onclick="resetGame()" class="btn btn-ghost" id="resetBtn">Play Again</button>
+            </div>
+            <div>
+              <div class="word" id="word">
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="startBtn" onclick="startGame()" class="btn btn-ghost">Start Game</button>
+            <button id="resetBtn" onclick="resetGame()" class="btn btn-ghost">Reset Game</button>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- Page transition (progress bar + fade) -->
-    <script src="/assets/transitions.js"></script>
+    <script src="../../assets/transitions.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
