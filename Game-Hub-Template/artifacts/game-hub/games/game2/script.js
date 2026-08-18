@@ -81,7 +81,7 @@ function resetGame() {
   document.getElementById("WordInput").readOnly = false;
   document.getElementById("resetBtn").disabled = true;
   document.getElementById("man").style.display = 'block';
-  document.getElementById("hangPole").src = "Hangman-Assets/Hangpole.png";
+  document.getElementById("hangPole").src = "Hangman-Assets/HangPole.png";
   lettersContainer.style.display = 'none';
   wordDiv.innerHTML = "";
 }
