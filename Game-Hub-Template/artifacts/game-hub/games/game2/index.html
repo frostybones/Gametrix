@@ -31,6 +31,16 @@
       <div class="game-container" id="game-container">
         <div class="game-placeholder">
           <div class="hangman-container">
+            <div id="win-screen" class="hidden">
+              <h1>You Win!</h1>
+              <h3 id="winWord"></h3>
+              <button onclick="resetGame()" class="btn btn-ghost" id="resetBtn">Play Again</button>
+            </div>
+            <div id="lose-screen" class="hidden">
+              <h1>Game Over!</h1>
+              <h3 id="loseWord"></h3>
+              <button onclick="resetGame()" class="btn btn-ghost" id="resetBtn">Play Again</button>
+            </div>
             <img src="Hangman-Assets/HangPole.png" alt="HangPole" class="hangpole" id="hangPole" />
             <div>
               <div class="word" id="word">

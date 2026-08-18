@@ -12,7 +12,7 @@ img {
   align-self: center; /* Options: center, flex-start, flex-end */
 }
 .man {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .word{
   display: flex;
@@ -39,6 +39,10 @@ hr{
     box-shadow var(--transition-fast);
   border: none;
 }
+#WordInput:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .letters {
   font-family: 'Press Start 2P', monospace;
   font-size: 14px;
@@ -62,6 +66,7 @@ hr{
   background: #17132a;
   box-shadow: 0 0 0 #6e5e5e;
   transform: translate(4px, 4px);
+  cursor: not-allowed;
 }
 .controls {
    align-items: center;
@@ -69,6 +74,43 @@ hr{
 .LettersContainer {
   margin-left: 350px;
   width: 50%;
+}
+#win-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#win-screen.hidden {
+  display: none;
+}
+
+#lose-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#lose-screen.hidden {
+  display: none;
 }
 /* Mobile-only adjustments */
 @media (max-width: 640px) {

@@ -197,6 +197,11 @@ ul { list-style: none; }
   color: var(--color-text);
   border-color: var(--color-accent);
   background-color: var(--color-accent-glow);
+  cursor: pointer;
+}
+.btn-ghost:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 

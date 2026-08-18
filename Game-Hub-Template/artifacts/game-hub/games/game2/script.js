@@ -67,23 +67,27 @@ function startGame() {
   }
 }
 function resetGame() {
-  gameStarted = false;
-  randomGame=false
-  word = "";
-  lettersGuessed = ""
-  lives=6
-  document.querySelectorAll('button').forEach(btn => btn.disabled = false);
-  document.getElementById("startBtn").style.display = 'inline-block';
-  document.getElementById("randomBtn").style.display = 'inline-block';
-  document.getElementById("WordInput").value = "";
-  document.getElementById("WordInput").placeholder = "Enter a Word";
-  document.getElementById("WordInput").disabled = false;
-  document.getElementById("WordInput").readOnly = false;
-  document.getElementById("resetBtn").disabled = true;
-  document.getElementById("man").style.display = 'block';
-  document.getElementById("hangPole").src = "Hangman-Assets/HangPole.png";
-  lettersContainer.style.display = 'none';
-  wordDiv.innerHTML = "";
+    gameStarted = false;
+    randomGame=false
+    word = "";
+    lettersGuessed = ""
+    lives=6
+    document.querySelectorAll('button').forEach(btn => btn.disabled = false);
+    document.getElementById("startBtn").style.display = 'inline-block';
+    document.getElementById("randomBtn").style.display = 'inline-block';
+    document.getElementById("WordInput").value = "";
+    document.getElementById("WordInput").placeholder = "Enter a Word";
+    document.getElementById("WordInput").disabled = false;
+    document.getElementById("WordInput").readOnly = false;
+    document.getElementById("resetBtn").disabled = true;
+    document.getElementById("man").style.display = 'block';
+    document.getElementById("man").src = "Hangman-Assets/FullBody.png";
+    document.getElementById("hangPole").src = "Hangman-Assets/HangPole.png";
+    document.getElementById("win-screen").classList.add("hidden");
+    document.getElementById("lose-screen").classList.add("hidden");
+
+    lettersContainer.style.display = 'none';
+    wordDiv.innerHTML = "";
 }
 
 function placeLetters() {
@@ -108,9 +112,13 @@ function placeLetters() {
                     }
                 }
                 if (lettersGuessed.length === word.length) {
-                    alert("Congratulations! You've guessed the word: " + word);
                     document.querySelectorAll('button').forEach(btn => btn.disabled = true);
                     document.getElementById("resetBtn").disabled = false;
+                    document.getElementById("man").style.display = 'block';
+                    document.getElementById("man").src = "Hangman-Assets/happy.png";
+                    document.getElementById("hangPole").src = "Hangman-Assets/HangPole.png";
+                    document.getElementById("win-screen").classList.remove("hidden");
+                    document.getElementById("winWord").innerHTML = "The word was: " + word;
                 }
             }
             else {
@@ -132,7 +140,8 @@ function placeLetters() {
                         break;
                     case 1:
                         document.getElementById("hangPole").src = "Hangman-Assets/Hang6.png";
-                        alert("Game Over! The word was: " + word);
+                        document.getElementById("loseWord").innerHTML = "The word was: " + word;
+                        document.getElementById("lose-screen").classList.remove("hidden");
                         break; 
                 }
                 lives--;
