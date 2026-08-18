@@ -30,7 +30,7 @@
 @media (max-width: 640px) {
   .SnakeCanvas {
     width: 100%;
-    height: auto;
+    height:100%;
     max-width: 100%;
   }
 

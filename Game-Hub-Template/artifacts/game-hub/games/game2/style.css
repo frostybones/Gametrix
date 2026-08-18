@@ -115,7 +115,6 @@ hr{
 /* Mobile-only adjustments */
 @media (max-width: 640px) {
   .hangman-container {
-    flex-direction: column;
     gap: 0.75rem;
   }
 
