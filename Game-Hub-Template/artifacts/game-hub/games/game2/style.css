@@ -112,7 +112,7 @@ hr{
 #lose-screen.hidden {
   display: none;
 }
-/* Mobile-only adjustments */
+/* Mobile-only adjustments 
 @media (max-width: 640px) {
   .hangman-container {
     gap: 0.75rem;
@@ -141,4 +141,4 @@ hr{
   }
 
   
-}
+}*/
